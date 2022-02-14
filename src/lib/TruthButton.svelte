@@ -1,12 +1,11 @@
 <script lang="ts">
+  import { getRandomElement } from "../utils/getRandomElement";
   import { createEventDispatcher } from "svelte";
   import truths from "../store/truth";
   const dispatch = createEventDispatcher<{ message: string }>();
 
   function getTruth() {
-    const randomNumber = Math.floor(Math.random() * $truths.length);
-    const text = $truths[randomNumber];
-
+    const text = getRandomElement($truths);
     dispatch("message", text);
   }
 </script>

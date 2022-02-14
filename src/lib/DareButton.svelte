@@ -1,17 +1,16 @@
 <script lang="ts">
+  import { getRandomElement } from "../utils/getRandomElement";
   import { createEventDispatcher } from "svelte";
   import dares from "../store/dares";
   const dispatch = createEventDispatcher<{ message: string }>();
 
-  function getTruth() {
-    const randomNumber = Math.floor(Math.random() * $dares.length);
-    const text = $dares[randomNumber];
-
+  function getDare() {
+    const text = getRandomElement($dares);
     dispatch("message", text);
   }
 </script>
 
-<button on:click={getTruth}> Dare </button>
+<button on:click={getDare}> Dare </button>
 
 <style lang="scss">
   button {
