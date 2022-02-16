@@ -64,6 +64,7 @@
     max-width: 14rem;
     margin: 1rem auto;
     line-height: 1.35;
+    color: rgb(243, 225, 225);
   }
 
   @media (min-width: 480px) {
