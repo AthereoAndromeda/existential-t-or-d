@@ -12,6 +12,8 @@ const truths = [
   "In your opinion, how does one truly live?",
 
   "Does anything matter?",
+  
+  "What's a quote you stand by alot, and why do you stand by it?"
 ];
 
 export default readable(truths);
