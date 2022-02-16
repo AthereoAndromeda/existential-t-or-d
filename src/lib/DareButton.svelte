@@ -2,10 +2,18 @@
   import { getRandomElement } from "../utils/getRandomElement";
   import { createEventDispatcher } from "svelte";
   import dares from "../store/dares";
+
   const dispatch = createEventDispatcher<{ message: string }>();
+  let possibleValues = $dares;
 
   function getDare() {
-    const text = getRandomElement($dares);
+    const text = getRandomElement(possibleValues);
+    possibleValues = possibleValues.filter((val) => val !== text);
+
+    if (possibleValues.length <= 0) {
+      possibleValues = $dares;
+    }
+
     dispatch("message", text);
   }
 </script>

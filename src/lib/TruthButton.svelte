@@ -2,10 +2,18 @@
   import { getRandomElement } from "../utils/getRandomElement";
   import { createEventDispatcher } from "svelte";
   import truths from "../store/truth";
+
   const dispatch = createEventDispatcher<{ message: string }>();
+  let possibleValues = $truths;
 
   function getTruth() {
     const text = getRandomElement($truths);
+    possibleValues = possibleValues.filter((val) => val !== text);
+
+    if (possibleValues.length <= 0) {
+      possibleValues = $truths;
+    }
+
     dispatch("message", text);
   }
 </script>

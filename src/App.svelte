@@ -1,5 +1,5 @@
 <script lang="ts">
-  import logo from "./assets/svelte.png";
+  // import logo from "./assets/svelte.png";
   import DareButton from "./lib/DareButton.svelte";
   import TheBlockquote from "./lib/TheBlockquote.svelte";
   import TruthButton from "./lib/TruthButton.svelte";
@@ -12,14 +12,14 @@
 </script>
 
 <main>
-  <img src={logo} alt="Svelte Logo" />
+  <!-- <img src={logo} alt="Svelte Logo" /> -->
   <h1>Existential Truth-or-Dare!</h1>
+  <hr />
   <p>Truth or dare with more spice!</p>
 
   <TruthButton on:message={handleMessage} />
   <DareButton on:message={handleMessage} />
 
-  <!-- <h2>{text}</h2> -->
   <TheBlockquote>
     {text}
   </TheBlockquote>
@@ -37,10 +37,18 @@
     margin: 0 auto;
   }
 
-  img {
-    height: 16rem;
-    width: 16rem;
+  hr {
+    color: #ff3e00;
+    padding: 2px;
+    background-color: #ff3e00;
+    border-radius: 10px;
+    border-color: #ff3e00;
   }
+
+  // img {
+  //   height: 16rem;
+  //   width: 16rem;
+  // }
 
   h1 {
     color: #ff3e00;
