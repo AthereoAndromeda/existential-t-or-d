@@ -8,7 +8,6 @@
 </blockquote>
 
 <style lang="scss">
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
   blockquote {
     font-size: 1.4em;
     width: 60%;
