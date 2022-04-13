@@ -5,8 +5,9 @@ const dares = [
 
   'Text your friend "goodnight. I love you." Randomly',
 
-  "a",
-  "b",
+  "Swap clothing with another person for 2 turns",
+
+  "Suck on someone's finger",
 ];
 
 export default readable(dares);
